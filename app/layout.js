@@ -14,7 +14,7 @@ export const metadata = {
       title: 'Vinil89',
       description: 'Banda de pop/rock de Recife',
       url: 'https://joaocarlosbgm.wixsite.com/vinil89',
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
       type: 'website',
     },
     icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
