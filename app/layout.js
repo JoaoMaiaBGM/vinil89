@@ -13,7 +13,7 @@ export const metadata = {
     openGraph: {
       title: 'Vinil89',
       description: 'Banda de pop/rock de Recife',
-      url: 'https://joaocarlosbgm.wixsite.com/vinil89',
+      url: 'https://vinil89.vercel.app/',
       images: [{ url: '/og-image.png', width: 1200, height: 630 }],
       type: 'website',
     },
