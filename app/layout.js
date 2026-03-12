@@ -10,14 +10,16 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata = {
   metadataBase: new URL("https://vinil89.vercel.app"),
   title: { default: "Vinil89", template: "%s | Vinil89" },
-  description: "Banda de pop/rock de Recife",
+  description:
+    "Banda de pop/rock de Recife com repertório clássico, shows ao vivo e novidades da Vinil89.",
   openGraph: {
-    title: "Vinil89",
-    description: "Banda de pop/rock de Recife",
+    title: "Vinil89 | Banda de pop/rock de Recife",
+    description:
+      "Banda de pop/rock de Recife com repertório clássico, shows ao vivo e novidades da Vinil89.",
     url: "https://vinil89.vercel.app",
     images: [
       {
-        url: "https://vinil89.vercel.app/og-image.png",
+        url: "https://vinil89.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
       },
