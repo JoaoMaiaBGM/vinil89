@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: 'static.wixstatic.com',
       },
     ],
+    qualities: [100, 75, 50, 25],
   },
 };
 
