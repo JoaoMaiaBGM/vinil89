@@ -1,3 +1,10 @@
+import Header from '@/components/header';
+
 export default function Contact() {
-  return <div>Contact Page</div>;
+  return (
+    <>
+      <Header />
+      <div>Contact Page</div>
+    </>
+  );
 }

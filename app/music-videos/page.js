@@ -1,3 +1,10 @@
+import Header from '@/components/header';
+
 export default function MusicVideos() {
-  return <div>Music Videos Page</div>;
+  return (
+    <>
+      <Header />
+      <div>Music Videos Page</div>
+    </>
+  );
 }
