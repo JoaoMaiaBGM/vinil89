@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative h-[48svh] w-full bg-black md:h-[60svh] lg:h-screen flex flex-col items-center justify-center">
+    <section className="relative h-[60svh] w-full bg-black md:h-[95svh] lg:h-screen flex flex-col items-center justify-center">
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_64a2f466993247fb86b18a52d833441b~mv2.jpg"
         alt="Vinil89 hero background"
@@ -23,7 +23,7 @@ export default function Hero() {
         <a href="/music-videos">
           <button
             type="button"
-            className="bg-[#999999] text-white border border-white px-4 py-2 rounded-md cursor-pointer mt-5"
+            className="bg-[#999999] text-white border border-white px-4 py-2 rounded-md cursor-pointer mt-5 hover:bg-black hover:border-black hover:text-white"
           >
             Ouça agora
           </button>

@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Pressura Mono', var(--font-ibm-plex-mono), 'Courier', monospace;
-  --font-mono: 'Pressura Mono', var(--font-ibm-plex-mono), 'Courier', monospace;
+  --font-sans: var(--font-montserrat), Arial, sans-serif;
+  --font-mono: var(--font-montserrat), Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,10 +19,14 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Pressura Mono', var(--font-ibm-plex-mono), 'Courier', monospace;
+  font-family: var(--font-montserrat), Arial, sans-serif;
 }
 
 @keyframes logoFlash {
