@@ -1,17 +1,32 @@
+'use client';
+import { IoClose } from 'react-icons/io5';
+
 export default function Modal({ isOpen, onClose, children }) {
+  if (!isOpen) return null;
+
   return (
-    isOpen && (
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center bg-black/75 p-4 md:items-center md:p-6"
+      onClick={onClose}
+    >
       <div
-        className="fixed inset-0 z-50 pt-10 flex h-full w-full items-center justify-center bg-black/75"
-        onClick={onClose}
+        className="relative mt-8 w-full max-w-[440px] rounded-lg bg-black md:mt-0"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className="w-full rounded-lg bg-black px-8 py-10 md:w-[400px] md:h-auto"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {children}
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
+          <div className="z-10 flex justify-end bg-black px-4 pb-2 pt-2 md:px-6">
+            <button
+              type="button"
+              className="cursor-pointer text-3xl leading-none text-white"
+              onClick={onClose}
+              aria-label="Fechar modal"
+            >
+              <IoClose />
+            </button>
+          </div>
+          <div className="px-6 pb-8 pt-2 md:px-8">{children}</div>
         </div>
       </div>
-    )
+    </div>
   );
 }

@@ -84,12 +84,6 @@ export default function About() {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <div
-          className="text-white text-2xl font-bold cursor-pointer text-end"
-          onClick={handleCloseModal}
-        >
-          &times;
-        </div>
         <div className="flex flex-col gap-8 items-center justify-center">
           <h1 className="text-4xl font-bold">#A Vinil89</h1>
           <p className="text-base/relaxed text-justify md:text-base/relaxed">
