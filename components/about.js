@@ -22,7 +22,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative h-screen w-full scroll-mt-28 bg-black flex flex-column align-center justify-center"
+      className="relative h-[70vh] w-full scroll-mt-28 bg-black flex flex-column items-center justify-center md:h-screen lg:h-[70vh]"
     >
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_42fb8564160e42ce920c9e85a29efe2e~mv2.jpeg"
@@ -34,8 +34,8 @@ export default function About() {
 
       <div className="bg-[#666] h-full w-full absolute inset-0 opacity-85"></div>
 
-      <div className="w-full max-w-[1100px] px-12 flex md:flex-row flex-col items-center justify-center gap-5 md:gap-10 z-10 md:px-4">
-        <div className="w-full min-w-[280px] max-w-[494px] h-[220px] flex-none md:w-[350px] md:h-[270px] lg:w-[494px] lg:h-[320px]">
+      <div className="w-full h-full max-w-svh max-h-svh px-5 py-20 flex flex-col items-center justify-center gap-5 z-10 lg:flex-row lg:p-0 md:gap-10 md:w-xl lg:w-full lg:h-[420px]">
+        <div className="w-full h-full lg:w-3/5">
           <Swiper
             navigation={true}
             modules={[Navigation, Autoplay]}
@@ -44,7 +44,7 @@ export default function About() {
             className="mySwiper w-full h-full"
           >
             {Object.keys(images).map((key) => (
-              <SwiperSlide key={key} className="relative w-full h-full">
+              <SwiperSlide key={key} className="relative">
                 <Image
                   src={images[key]}
                   alt={`Vinil89 ${key}`}
@@ -56,9 +56,9 @@ export default function About() {
           </Swiper>
         </div>
 
-        <div className="w-full min-w-[230px] max-w-[494px] h-[270px] flex-none flex flex-col align-center justify-between items-center md:w-[280px] md:h-[320px]">
-          <h1 className="text-2xl lg:text-5xl">#A Vinil89</h1>
-          <p className="w-full text-sm/loose text-justify md:text-sm/snug lg:text-base/normal">
+        <div className="w-full h-full flex flex-col align-center justify-between items-center lg:w-2/5">
+          <h1 className="text-4xl md:text-6xl">#A Vinil89</h1>
+          <p className="w-full text-base/relaxed text-justify md:text-2xl/relaxed lg:text-xl/relaxed">
             Surgida em 2024, a Vinil89 é uma banda formada por músicos de diferentes estados do
             Brasil — Pernambuco, Pará, Brasília e Goiás. Carrega em sua essência a paixão pela
             música e o respeito pelos grandes mestres do pop/rock. Formada por músicos...
