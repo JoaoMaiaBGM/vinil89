@@ -33,7 +33,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative h-screen w-full scroll-mt-28 bg-black flex flex-column items-center justify-center md:h-screen lg:h-[70vh]"
+      className="relative w-full scroll-mt-28 bg-black py-14 md:min-h-screen lg:min-h-[70vh] lg:py-10 flex flex-col items-center justify-center"
     >
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_42fb8564160e42ce920c9e85a29efe2e~mv2.jpeg"
@@ -43,16 +43,16 @@ export default function About() {
         className="object-cover object-center opacity-50"
       />
 
-      <div className="bg-[#666] h-full w-full absolute inset-0 opacity-85"></div>
+      <div className="absolute inset-0 h-full w-full bg-[#666] opacity-85" />
 
-      <div className="w-full h-full max-w-svh max-h-svh px-5 py-20 flex flex-col items-center justify-center gap-5 z-10 lg:flex-row lg:p-0 md:gap-10 md:w-xl lg:w-full lg:h-[420px]">
-        <div className="w-full h-full lg:w-3/5">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 sm:px-8 lg:h-[420px] lg:flex-row lg:items-center lg:gap-10">
+        <div className="relative aspect-4/3 w-full overflow-hidden self-center lg:h-full lg:w-3/5 lg:aspect-auto">
           <Swiper
             navigation={true}
             modules={[Navigation, Autoplay]}
             autoplay={{ delay: 4500, disableOnInteraction: false }}
             loop={true}
-            className="mySwiper w-full h-full"
+            className="mySwiper h-full w-full"
           >
             {Object.keys(images).map((key) => (
               <SwiperSlide key={key} className="relative">
@@ -67,16 +67,16 @@ export default function About() {
           </Swiper>
         </div>
 
-        <div className="w-full h-full flex flex-col align-center mt-8 justify-between items-center lg:w-2/5 lg:mt-0">
+        <div className="mt-2 flex w-full h-full flex-col items-center justify-between gap-5 self-center lg:mt-0 lg:w-2/5">
           <h1 className="text-4xl md:text-6xl">#A Vinil89</h1>
-          <p className="w-full text-xl/relaxed text-justify md:text-2xl/relaxed lg:text-xl/relaxed">
+          <p className="w-full text-left text-xl/relaxed tracking-normal md:text-2xl/relaxed lg:text-xl/relaxed">
             Surgida em 2024, a Vinil89 é uma banda formada por músicos de diferentes estados do
             Brasil — Pernambuco, Pará, Brasília e Goiás. Carrega em sua essência a paixão pela
             música e o respeito pelos grandes mestres do pop/rock. Formada por músicos...
           </p>
           <button
             type="button"
-            className="bg-[#999999] text-white border border-white px-4 py-2 rounded-md cursor-pointer mt-5 hover:bg-black hover:border-black hover:text-white"
+            className="mt-3 cursor-pointer rounded-md border border-white bg-[#999999] px-4 py-2 text-white hover:border-black hover:bg-black hover:text-white"
             onClick={handleOpenModal}
           >
             Ver mais
@@ -86,7 +86,7 @@ export default function About() {
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <div className="flex flex-col gap-8 items-center justify-center">
           <h1 className="text-4xl font-bold">#A Vinil89</h1>
-          <p className="text-base/relaxed text-justify md:text-base/relaxed">
+          <p className="text-base/relaxed text-left md:text-base/relaxed">
             Surgida em 2024, a Vinil89 é uma banda formada por músicos de diferentes estados do
             Brasil — Pernambuco, Pará, Brasília e Goiás. Carrega em sua essência a paixão pela
             música e o respeito pelos grandes mestres do pop/rock. Formada por músicos dedicados à
