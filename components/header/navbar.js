@@ -14,6 +14,13 @@ export default function Navbar({ isMobile = false, onNavigate }) {
   const pathname = usePathname();
 
   const handleAnchorNavigation = (event, href) => {
+    if (href === '/' && pathname === '/') {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.replaceState(null, '', '/');
+      return;
+    }
+
     if (!href.startsWith('/#') || pathname !== '/') {
       return;
     }
