@@ -76,7 +76,7 @@ export default function About() {
           </p>
           <button
             type="button"
-            className="mt-3 cursor-pointer rounded-md border border-white bg-[#999999] px-4 py-2 text-white hover:border-black hover:bg-black hover:text-white"
+            className="mt-3 cursor-pointer rounded-md border uppercase border-white bg-[#999999] px-4 py-2 text-white hover:border-black hover:bg-black hover:text-white"
             onClick={handleOpenModal}
           >
             Ver mais

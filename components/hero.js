@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative h-[60svh] w-full bg-black md:h-screen lg:h-[150svh] flex flex-col items-center justify-center">
+    <section className="relative h-[60svh] w-full bg-black md:h-[90svh] lg:h-[150svh] flex flex-col items-center justify-center">
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_64a2f466993247fb86b18a52d833441b~mv2.jpg"
         alt="Vinil89 desktop hero background"
