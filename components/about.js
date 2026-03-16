@@ -33,7 +33,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full scroll-mt-28 bg-black py-14 md:min-h-screen lg:min-h-[70vh] lg:py-10 flex flex-col items-center justify-center"
+      className="relative w-full flex flex-col items-center justify-center scroll-mt-28 bg-black py-20 md:px-14 md:min-h-screen lg:h-screen"
     >
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_42fb8564160e42ce920c9e85a29efe2e~mv2.jpeg"
