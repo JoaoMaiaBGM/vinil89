@@ -36,7 +36,7 @@ export default function MusicVideos() {
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {videos.map((video) => (
             <div key={video.id} className="flex flex-col gap-3">
-              <div className="aspect-video w-full rounded-sm overflow-hidden">
+              <div className="aspect-video w-full rounded-lg overflow-hidden">
                 <iframe
                   src={`https://www.youtube.com/embed/${video.id}`}
                   title={video.titulo}
