@@ -1,13 +1,6 @@
-import { useEffect } from 'react';
 import { GiCheckMark } from 'react-icons/gi';
 
 export const SuccessMessage = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-  }, []);
-
   return (
     <div className="mx-auto text-center">
       <GiCheckMark className="mx-auto mb-10 size-24 rounded-full bg-brst-blue-200 p-4 text-white" />
