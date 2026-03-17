@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import Image from 'next/image';
+import { ContactForm } from './_components/form';
 
 export const metadata = {
   title: 'Contato',
@@ -70,43 +71,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <form className="grid gap-3 md:grid-cols-[1fr_1.05fr] md:gap-2">
-              <div className="space-y-3 md:space-y-2">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Nome"
-                  className="w-full rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:py-2 md:text-base"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  className="w-full rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:py-2 md:text-base"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Telefone"
-                  className="w-full rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:py-2 md:text-base"
-                />
-              </div>
-
-              <div className="flex flex-col gap-3 md:gap-2">
-                <textarea
-                  name="message"
-                  rows={6}
-                  placeholder="Digite sua mensagem aqui..."
-                  className="min-h-[170px] w-full resize-none rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:min-h-[106px] md:py-2 md:text-base"
-                />
-                <button
-                  type="button"
-                  className="mx-auto w-[160px] rounded-lg border border-white/80 bg-[#8d8d8d] px-6 py-3 text-3xl tracking-[0.12em] text-white transition-colors hover:bg-[#737373] md:ml-auto md:mr-0 md:w-[110px] md:rounded-md md:px-4 md:py-1.5 md:text-base md:tracking-normal"
-                >
-                  Enviar
-                </button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </section>
       </main>
