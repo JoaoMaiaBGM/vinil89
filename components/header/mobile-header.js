@@ -46,7 +46,7 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
       </button>
 
       <div
-        className={`fixed inset-0 z-60 ${
+        className={`fixed inset-0 z-50 ${
           isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
         }`}
       >
