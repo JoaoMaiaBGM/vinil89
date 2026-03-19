@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 right-0 left-0 z-50 overflow-hidden transition-colors duration-300 ${
+      className={`sticky top-0 right-0 left-0 z-50 transition-colors duration-300 ${
         isScrolled
           ? 'bg-black shadow-[0_4px_18px_rgba(0,0,0,0.55)]'
           : 'bg-transparent shadow-[0_2px_10px_rgba(0,0,0,0.35)]'
