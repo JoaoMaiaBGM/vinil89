@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import Image from 'next/image';
+import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import { ContactForm } from './_components/form';
 
 export const metadata = {
@@ -57,7 +58,7 @@ export default function Contact() {
                   aria-label="Instagram da Vinil89"
                   className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-[#ff0f8b] text-2xl font-bold text-white transition-transform hover:scale-105"
                 >
-                  IG
+                  <FaInstagram size={28} />
                 </a>
                 <a
                   href="https://www.youtube.com/@vinil89.oficial"
@@ -66,7 +67,7 @@ export default function Contact() {
                   aria-label="YouTube da Vinil89"
                   className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-[#ff2d2d] text-sm font-bold text-white transition-transform hover:scale-105"
                 >
-                  YT
+                  <FaYoutube size={28} />
                 </a>
               </div>
             </div>
