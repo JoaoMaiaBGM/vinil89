@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import Image from 'next/image';
+import Footer from '@/components/footer';
 
 export const metadata = {
   title: 'Clipes',
@@ -49,6 +50,8 @@ export default function MusicVideos() {
           ))}
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

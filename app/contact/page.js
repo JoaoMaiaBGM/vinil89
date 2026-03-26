@@ -2,6 +2,7 @@ import Header from '@/components/header';
 import Image from 'next/image';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import { ContactForm } from './_components/form';
+import Footer from '@/components/footer';
 
 export const metadata = {
   title: 'Contato',
@@ -76,6 +77,8 @@ export default function Contact() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }
