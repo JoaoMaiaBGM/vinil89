@@ -20,7 +20,7 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
   }, [isMenuOpen]);
 
   return (
-    <div className="relative z-10 mx-auto flex min-h-28 w-full items-center px-4 md:hidden">
+    <div className="relative z-50 mx-auto flex min-h-28 w-full items-center px-4 md:hidden">
       <Link href="/" className="shrink-0">
         <Image
           src="https://static.wixstatic.com/media/c3fe9c_1a80789ff3c34b82bd2d6e7de4a2a3f6~mv2.png"
