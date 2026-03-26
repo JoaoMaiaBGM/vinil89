@@ -25,32 +25,34 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 right-0 left-0 overflow-y-auto overflow-x-hidden z-10 transition-colors duration-300 ${
+      className={`sticky top-0 right-0 left-0 overflow-x-hidden z-10 transition-colors duration-300 ${
         isScrolled
           ? 'bg-black shadow-[0_4px_18px_rgba(0,0,0,0.55)]'
           : 'bg-transparent shadow-[0_2px_10px_rgba(0,0,0,0.35)]'
       }`}
     >
-      {!isScrolled && (
-        <>
-          <Image
-            src="https://static.wixstatic.com/media/e203109d1da54dd0aaf8de0f98a49ad5.jpg"
-            alt="Textura do header"
-            fill
-            priority
-            className="pointer-events-none scale-150 object-cover object-top opacity-85 md:scale-100"
-          />
-          <div className="pointer-events-none absolute inset-0 z-1 bg-black/45" />
-        </>
-      )}
+      <div className="relative isolate">
+        {!isScrolled && (
+          <>
+            <Image
+              src="https://static.wixstatic.com/media/e203109d1da54dd0aaf8de0f98a49ad5.jpg"
+              alt="Textura do header"
+              fill
+              priority
+              className="pointer-events-none -z-10 scale-150 object-cover object-top opacity-85 md:scale-100"
+            />
+            <div className="pointer-events-none absolute inset-0 z-0 bg-black/45" />
+          </>
+        )}
 
-      <DesktopHeader />
-      <MobileHeader
-        isMenuOpen={isMenuOpen}
-        onOpenMenu={() => setIsMenuOpen(true)}
-        onCloseMenu={() => setIsMenuOpen(false)}
-        isScrolled={isScrolled}
-      />
+        <DesktopHeader />
+        <MobileHeader
+          isMenuOpen={isMenuOpen}
+          onOpenMenu={() => setIsMenuOpen(true)}
+          onCloseMenu={() => setIsMenuOpen(false)}
+          isScrolled={isScrolled}
+        />
+      </div>
     </header>
   );
 }

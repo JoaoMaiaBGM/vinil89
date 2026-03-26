@@ -46,12 +46,12 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
       </button>
 
       <div
-        className={`fixed inset-0 z-50 ${
+        className={`fixed inset-0 z-9999 ${
           isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
         }`}
       >
         <div
-          className={`absolute inset-0 bg-[#e6e6e6] transition-transform duration-500 ease-out ${
+          className={`absolute inset-0 bg-[#e6e6e6] transition-transform duration-500 ease-out will-change-transform ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         />
