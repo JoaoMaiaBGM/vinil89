@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Navbar from './navbar';
 
 export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isScrolled }) {
@@ -18,6 +19,37 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
       document.body.style.overflow = '';
     };
   }, [isMenuOpen]);
+
+  const menuOverlay = (
+    <div
+      className={`fixed inset-0 z-2147483647 md:hidden ${
+        isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
+      }`}
+    >
+      <div
+        className={`absolute inset-0 bg-[#e6e6e6] transition-transform duration-500 ease-out will-change-transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      />
+
+      <div
+        className={`relative h-full w-full transition-opacity duration-200 ${
+          isMenuOpen ? 'opacity-100 delay-150' : 'opacity-0'
+        }`}
+      >
+        <button
+          type="button"
+          onClick={onCloseMenu}
+          className="absolute top-14 right-12 text-[56px] leading-none text-black/85"
+          aria-label="Close menu"
+        >
+          <span className="block translate-y-[-2px]">&times;</span>
+        </button>
+
+        <Navbar isMobile onNavigate={onCloseMenu} />
+      </div>
+    </div>
+  );
 
   return (
     <div className="relative z-50 mx-auto flex min-h-28 w-full items-center px-4 md:hidden">
@@ -45,34 +77,7 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
         <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-white/85' : 'bg-black/80'}`} />
       </button>
 
-      <div
-        className={`fixed inset-0 z-9999 ${
-          isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
-        }`}
-      >
-        <div
-          className={`absolute inset-0 bg-[#e6e6e6] transition-transform duration-500 ease-out will-change-transform ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        />
-
-        <div
-          className={`relative h-full w-full transition-opacity duration-200 ${
-            isMenuOpen ? 'opacity-100 delay-150' : 'opacity-0'
-          }`}
-        >
-          <button
-            type="button"
-            onClick={onCloseMenu}
-            className="absolute top-14 right-12 text-[56px] leading-none text-black/85"
-            aria-label="Close menu"
-          >
-            <span className="block translate-y-[-2px]">&times;</span>
-          </button>
-
-          <Navbar isMobile onNavigate={onCloseMenu} />
-        </div>
-      </div>
+      {typeof document !== 'undefined' ? createPortal(menuOverlay, document.body) : null}
     </div>
   );
 }
