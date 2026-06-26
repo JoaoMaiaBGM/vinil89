@@ -7,8 +7,10 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata = {
-  metadataBase: new URL('https://vinil89.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: { default: 'Vinil89', template: '%s | Vinil89' },
   description:
     'Banda de pop/rock de Recife com repertório clássico, shows ao vivo e novidades da Vinil89.',
@@ -16,10 +18,10 @@ export const metadata = {
     title: 'Vinil89 | Banda de pop/rock de Recife',
     description:
       'Banda de pop/rock de Recife com repertório clássico, shows ao vivo e novidades da Vinil89.',
-    url: 'https://vinil89.vercel.app',
+    url: siteUrl,
     images: [
       {
-        url: 'https://vinil89.vercel.app/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
       },

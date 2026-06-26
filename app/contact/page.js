@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Fale com a Vinil89 para shows e informações.',
   openGraph: {
     title: 'Contato | Vinil89',
-    images: [{ url: 'https://vinil89.vercel.app/og-image.jpg' }],
+    images: [{ url: '/og-image.jpg' }],
   },
 };
 

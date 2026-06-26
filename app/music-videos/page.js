@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Assista aos clipes da Vinil89 ao vivo',
   openGraph: {
     title: 'Clipes | Vinil89',
-    images: [{ url: 'https://vinil89.vercel.app/og-image.jpg' }],
+    images: [{ url: '/og-image.jpg' }],
   },
 };
 
