@@ -6,18 +6,18 @@ export default function Modal({ isOpen, onClose, children }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/75 p-4 md:items-center md:p-6"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-vin-background/75 p-4 md:items-center md:p-6"
       onClick={onClose}
     >
       <div
-        className="relative mt-8 w-full max-w-[440px] rounded-lg bg-black md:mt-0"
+        className="relative mt-8 w-full max-w-[440px] rounded-lg bg-vin-background md:mt-0"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
-          <div className="z-10 flex justify-end bg-black px-4 pb-2 pt-2 md:px-6">
+          <div className="z-10 flex justify-end bg-vin-background px-4 pb-2 pt-2 md:px-6">
             <button
               type="button"
-              className="cursor-pointer text-3xl leading-none text-white"
+              className="cursor-pointer text-3xl leading-none text-vin-white"
               onClick={onClose}
               aria-label="Fechar modal"
             >

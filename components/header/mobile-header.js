@@ -27,7 +27,7 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
       }`}
     >
       <div
-        className={`absolute inset-0 bg-[#e6e6e6] transition-transform duration-500 ease-out will-change-transform ${
+        className={`absolute inset-0 bg-vin-gray-100 transition-transform duration-500 ease-out will-change-transform ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       />
@@ -40,7 +40,7 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
         <button
           type="button"
           onClick={onCloseMenu}
-          className="absolute top-14 right-12 text-[56px] leading-none text-black/85"
+          className="absolute top-14 right-12 text-[56px] leading-none text-vin-black/85"
           aria-label="Close menu"
         >
           <span className="block translate-y-[-2px]">&times;</span>
@@ -72,9 +72,9 @@ export default function MobileHeader({ isMenuOpen, onOpenMenu, onCloseMenu, isSc
         className="ml-auto flex h-11 w-11 flex-col items-center justify-center gap-[5px]"
         aria-label="Open menu"
       >
-        <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-white/85' : 'bg-black/80'}`} />
-        <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-white/85' : 'bg-black/80'}`} />
-        <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-white/85' : 'bg-black/80'}`} />
+        <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-vin-white/85' : 'bg-vin-black/80'}`} />
+        <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-vin-white/85' : 'bg-vin-black/80'}`} />
+        <span className={`h-[2.5px] w-8 ${isScrolled ? 'bg-vin-white/85' : 'bg-vin-black/80'}`} />
       </button>
 
       {typeof document !== 'undefined' ? createPortal(menuOverlay, document.body) : null}

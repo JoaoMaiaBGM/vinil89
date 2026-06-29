@@ -48,8 +48,8 @@ export default function Navbar({ isMobile = false, onNavigate }) {
               handleAnchorNavigation(event, item.href);
               onNavigate?.();
             }}
-            className={`block w-full border-b border-black/55 py-3 text-center text-[20px] leading-none ${
-              item.isActive ? 'text-black/35' : 'text-black'
+            className={`block w-full border-b border-vin-black/55 py-3 text-center text-[20px] leading-none ${
+              item.isActive ? 'text-vin-black/35' : 'text-vin-black'
             }`}
           >
             {item.label}
@@ -60,7 +60,7 @@ export default function Navbar({ isMobile = false, onNavigate }) {
   }
 
   const desktopLinkClass =
-    'text-sm lg:text-[16px] font-medium text-white transition-colors hover:text-[#00c8d7] whitespace-nowrap';
+    'text-sm lg:text-[16px] font-medium text-vin-white transition-colors hover:text-vin-blue-100 whitespace-nowrap';
 
   return (
     <nav className="flex items-center gap-4 lg:gap-6 xl:gap-8">
@@ -69,7 +69,7 @@ export default function Navbar({ isMobile = false, onNavigate }) {
           key={item.href}
           href={item.href}
           onClick={(event) => handleAnchorNavigation(event, item.href)}
-          className={`${desktopLinkClass} ${item.isActive ? 'text-[#00c8d7]' : ''}`}
+          className={`${desktopLinkClass} ${item.isActive ? 'text-vin-primary' : ''}`}
         >
           {item.label}
         </Link>

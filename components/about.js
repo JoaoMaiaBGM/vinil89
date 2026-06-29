@@ -33,7 +33,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full flex flex-col items-center justify-center scroll-mt-28 bg-black py-20 md:px-14 md:min-h-screen lg:h-screen"
+      className="relative flex w-full scroll-mt-28 flex-col items-center justify-center bg-vin-background py-20 md:min-h-screen md:px-14 lg:h-screen"
     >
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_42fb8564160e42ce920c9e85a29efe2e~mv2.jpeg"
@@ -43,7 +43,7 @@ export default function About() {
         className="object-cover object-center opacity-50"
       />
 
-      <div className="absolute inset-0 h-full w-full bg-[#666] opacity-85" />
+      <div className="absolute inset-0 h-full w-full bg-vin-secondary opacity-85" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 sm:px-8 lg:h-[420px] lg:flex-row lg:items-center lg:gap-10">
         <div className="relative aspect-4/3 w-full overflow-hidden self-center lg:h-full lg:w-3/5 lg:aspect-auto">
@@ -68,25 +68,21 @@ export default function About() {
         </div>
 
         <div className="mt-2 flex w-full h-full flex-col items-center justify-between gap-5 self-center lg:mt-0 lg:w-2/5">
-          <h1 className="text-4xl md:text-6xl">#A Vinil89</h1>
-          <p className="w-full text-left text-xl/relaxed tracking-normal md:text-2xl/relaxed lg:text-xl/relaxed">
+          <h1 className="section-title">#A Vinil89</h1>
+          <p className="p-large w-full text-left tracking-normal">
             Surgida em 2024, a Vinil89 é uma banda formada por músicos de diferentes estados do
             Brasil — Pernambuco, Pará, Brasília e Goiás. Carrega em sua essência a paixão pela
             música e o respeito pelos grandes mestres do pop/rock. Formada por músicos...
           </p>
-          <button
-            type="button"
-            className="mt-3 cursor-pointer rounded-md border uppercase border-white bg-[#999999] px-4 py-2 text-white hover:border-black hover:bg-black hover:text-white"
-            onClick={handleOpenModal}
-          >
+          <button type="button" className="btn-primary mt-3" onClick={handleOpenModal}>
             Ver mais
           </button>
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <div className="flex flex-col gap-8 items-center justify-center">
-          <h1 className="text-4xl font-bold">#A Vinil89</h1>
-          <p className="text-base/relaxed text-left md:text-base/relaxed">
+          <h1 className="section-title font-medium">#A Vinil89</h1>
+          <p className="p-medium text-left">
             Surgida em 2024, a Vinil89 é uma banda formada por músicos de diferentes estados do
             Brasil — Pernambuco, Pará, Brasília e Goiás. Carrega em sua essência a paixão pela
             música e o respeito pelos grandes mestres do pop/rock. Formada por músicos dedicados à

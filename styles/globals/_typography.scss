@@ -1,0 +1,200 @@
+@reference './tailwind-base.css';
+
+@layer base {
+  h1,
+  .h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0;
+    @apply font-normal;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 54px;
+      line-height: 58px;
+    }
+
+    &.h1-variant {
+      font-size: 40px;
+      line-height: 44px;
+
+      @media (min-width: theme('screens.lg')) {
+        font-size: 70px;
+        line-height: 68px;
+      }
+    }
+  }
+
+  h2,
+  .h2 {
+    @apply font-medium;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    &.h2-variant {
+      font-size: 24px;
+      line-height: 32px;
+
+      @media (min-width: theme('screens.lg')) {
+        font-size: 32px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  h3,
+  .h3 {
+    @apply font-medium;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 28px;
+    }
+  }
+
+  h4,
+  .h4 {
+    @apply font-medium;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 24px;
+    }
+  }
+
+  .p-large {
+    font-size: 18px;
+    line-height: 24px;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .p-large-bold {
+    @extend .p-large;
+    @apply font-medium;
+  }
+
+  body,
+  .p-medium {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .p-medium-bold {
+    @extend .p-medium;
+    @apply font-medium;
+  }
+
+  .p-small {
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (min-width: theme('screens.lg')) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .p-small-bold {
+    @extend .p-small;
+    @apply font-medium;
+  }
+
+  .p-caption {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .p-caption-bold {
+    @extend .p-caption;
+    @apply font-bold;
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+  }
+
+  a:hover {
+    color: var(--secondary);
+  }
+}
+
+@layer components {
+  .cms {
+    h2 {
+      @apply mb-4 mt-8;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      @apply my-4;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.7px;
+    }
+
+    a {
+      @apply text-vin-blue-200 hover:text-vin-blue-300 hover:underline;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol,
+    ul {
+      @apply space-y-1 pl-5 marker:text-vin-black;
+    }
+
+    li p {
+      margin: 0;
+    }
+
+    &.p-large {
+      ol,
+      ul {
+        @apply space-y-2 pl-8;
+      }
+
+      p {
+        @extend .p-large;
+      }
+    }
+
+    &.p-small {
+      p {
+        @extend .p-small;
+      }
+    }
+  }
+}

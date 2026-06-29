@@ -25,9 +25,9 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 right-0 left-0 overflow-x-hidden z-50 transition-colors duration-300 ${
+      className={`sticky top-0 right-0 left-0 z-50 overflow-x-hidden transition-colors duration-300 ${
         isScrolled
-          ? 'bg-black shadow-[0_4px_18px_rgba(0,0,0,0.55)]'
+          ? 'bg-vin-background shadow-[0_4px_18px_rgba(0,0,0,0.55)]'
           : 'bg-transparent shadow-[0_2px_10px_rgba(0,0,0,0.35)]'
       }`}
     >
@@ -41,7 +41,7 @@ export default function Header() {
               priority
               className="pointer-events-none -z-10 scale-150 object-cover object-top opacity-85 md:scale-100"
             />
-            <div className="pointer-events-none absolute inset-0 z-0 bg-black/45" />
+            <div className="pointer-events-none absolute inset-0 z-0 bg-vin-background/45" />
           </>
         )}
 

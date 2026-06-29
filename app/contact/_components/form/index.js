@@ -52,10 +52,10 @@ export const ContactForm = () => {
             type="text"
             name="name"
             placeholder="Nome"
-            className="w-full rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:py-2 md:text-base"
+            className="w-full rounded-md border border-vin-white/40 bg-vin-gray-100 px-4 py-3 text-xl text-vin-black placeholder:text-vin-black/75 focus:outline-none md:py-2 md:text-base"
           />
           {nameError && (
-            <p data-error className="pt-1 text-sm text-red-300">
+            <p data-error className="pt-1 text-sm text-vin-error">
               {nameError}
             </p>
           )}
@@ -65,10 +65,10 @@ export const ContactForm = () => {
             type="email"
             name="email"
             placeholder="Email"
-            className="w-full rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:py-2 md:text-base"
+            className="w-full rounded-md border border-vin-white/40 bg-vin-gray-100 px-4 py-3 text-xl text-vin-black placeholder:text-vin-black/75 focus:outline-none md:py-2 md:text-base"
           />
           {emailError && (
-            <p data-error className="pt-1 text-sm text-red-300">
+            <p data-error className="pt-1 text-sm text-vin-error">
               {emailError}
             </p>
           )}
@@ -78,10 +78,10 @@ export const ContactForm = () => {
             type="tel"
             name="phone"
             placeholder="Telefone"
-            className="w-full rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:py-2 md:text-base"
+            className="w-full rounded-md border border-vin-white/40 bg-vin-gray-100 px-4 py-3 text-xl text-vin-black placeholder:text-vin-black/75 focus:outline-none md:py-2 md:text-base"
           />
           {phoneError && (
-            <p data-error className="pt-1 text-sm text-red-300">
+            <p data-error className="pt-1 text-sm text-vin-error">
               {phoneError}
             </p>
           )}
@@ -94,10 +94,10 @@ export const ContactForm = () => {
             name="message"
             rows={6}
             placeholder="Digite sua mensagem aqui..."
-            className="min-h-[170px] w-full resize-none rounded-md border border-white/40 bg-[#e6e6e6] px-4 py-3 text-xl text-black placeholder:text-black/75 focus:outline-none md:min-h-[106px] md:py-2 md:text-base"
+            className="min-h-[170px] w-full resize-none rounded-md border border-vin-white/40 bg-vin-gray-100 px-4 py-3 text-xl text-vin-black placeholder:text-vin-black/75 focus:outline-none md:min-h-[106px] md:py-2 md:text-base"
           />
           {messageError && (
-            <p data-error className="pt-1 text-sm text-red-300">
+            <p data-error className="pt-1 text-sm text-vin-error">
               {messageError}
             </p>
           )}
@@ -105,12 +105,12 @@ export const ContactForm = () => {
         <button
           type="submit"
           disabled={isPending}
-          className="mx-auto w-[160px] rounded-lg border border-white/80 bg-[#8d8d8d] px-6 py-3 text-3xl tracking-[0.12em] text-white transition-colors hover:bg-[#737373] md:ml-auto md:mr-0 md:w-[110px] md:rounded-md md:px-4 md:py-1.5 md:text-base md:tracking-normal"
+          className="mx-auto w-[160px] rounded-lg border border-vin-white/80 bg-vin-secondary px-6 py-3 text-3xl tracking-[0.12em] text-vin-white transition-colors hover:bg-vin-blue-250 md:ml-auto md:mr-0 md:w-[110px] md:rounded-md md:px-4 md:py-1.5 md:text-base md:tracking-normal"
         >
           {isPending ? 'Enviando...' : 'Enviar'}
         </button>
         {formError && (
-          <p data-error className="text-center text-sm text-red-300 md:text-right">
+          <p data-error className="text-center text-sm text-vin-error md:text-right">
             {formError}
           </p>
         )}
