@@ -25,19 +25,19 @@ export default function MusicVideos() {
     <>
       <Header />
 
-      <main className="relative min-h-screen bg-white text-black px-6 py-16">
+      <main className="relative min-h-screen bg-vin-white px-6 py-16 text-vin-black">
         <Image
           src="https://static.wixstatic.com/media/c3fe9c_cd95960181584eabaf3f30d845fa5cb3~mv2.jpg"
           alt="People attending a show"
           fill
           className="object-cover opacity-30"
         />
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-10 relative z-10">#Clipes</h1>
+        <h1 className="section-title relative z-10 mb-10 text-center">#Clipes</h1>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {videos.map((video) => (
             <div key={video.id} className="flex flex-col gap-3">
-              <div className="aspect-video w-full rounded-lg overflow-hidden">
+              <div className="aspect-video w-full overflow-hidden rounded-product-card">
                 <iframe
                   src={`https://www.youtube.com/embed/${video.id}`}
                   title={video.titulo}

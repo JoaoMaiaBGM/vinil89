@@ -1,10 +1,11 @@
-import { IBM_Plex_Mono } from 'next/font/google';
-import './globals.css';
+import { Playfair_Display } from 'next/font/google';
+import '@/styles/tailwind-base.css';
+import '@/styles/globals.scss';
 
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ['400', '500', '700'],
-  variable: '--font-ibm-plex-mono',
+const playfair = Playfair_Display({
   subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -33,8 +34,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexMono.variable} antialiased`}>{children}</body>
+    <html lang="pt-BR">
+      <body className={`${playfair.variable} font-sans antialiased`}>{children}</body>
     </html>
   );
 }

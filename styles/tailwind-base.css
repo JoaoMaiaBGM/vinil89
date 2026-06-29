@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+:root {
+  --primary: #f59e0b;
+  --secondary: #475569;
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@layer base {
+  * {
+    @apply border-vin-gray-200;
+  }
+
+  body {
+    @apply bg-vin-white text-vin-black;
+    font-family: var(--font-playfair), 'Playfair Display', ui-serif, Georgia, serif;
+  }
+
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  [type='button']:not(:disabled),
+  [type='submit']:not(:disabled),
+  [type='reset']:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type='checkbox']:not(:disabled),
+  input[type='radio']:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  .btn-primary {
+    @apply rounded-md border border-vin-white bg-vin-secondary px-4 py-2 uppercase text-vin-white transition-colors;
+    @apply hover:border-vin-black hover:bg-vin-black hover:text-vin-white;
+  }
+
+  .btn-accent {
+    @apply rounded-md border border-vin-primary bg-vin-primary px-4 py-2 uppercase text-vin-primaryForeground transition-colors;
+    @apply hover:border-vin-primary/80 hover:bg-vin-primary/90;
+  }
+
+  .section-title {
+    @apply text-4xl font-normal md:text-5xl lg:text-6xl;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl text-vin-secondary;
+  }
+}

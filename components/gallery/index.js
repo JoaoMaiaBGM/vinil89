@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative w-full scroll-mt-28 bg-black/95 px-3 py-8 sm:px-4 md:px-6 lg:px-8"
+      className="relative w-full scroll-mt-28 bg-vin-background/95 px-3 py-8 sm:px-4 md:px-6 lg:px-8"
     >
       <Image
         src="https://static.wixstatic.com/media/c3fe9c_cd95960181584eabaf3f30d845fa5cb3~mv2.jpg"
@@ -18,7 +18,7 @@ export default function Gallery() {
         {galleryImages.map((image) => (
           <figure
             key={image.id}
-            className="group relative aspect-square overflow-hidden rounded-md bg-neutral-900"
+            className="group relative aspect-square overflow-hidden rounded-product-card bg-vin-blue-300"
           >
             <Image
               src={image.img}

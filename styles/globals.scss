@@ -1,0 +1,116 @@
+@use './globals/typography';
+@reference './tailwind-base.css';
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  @apply bg-vin-white;
+}
+
+.superhero {
+  @apply -mt-header;
+
+  @media (min-width: theme('screens.lg')) {
+    @apply -mt-header-lg;
+  }
+}
+
+@layer utilities {
+  .section-pt {
+    @apply pt-14;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply pt-16;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply pt-20;
+    }
+  }
+
+  .section-mt {
+    @apply mt-14;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply mt-16;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply mt-20;
+    }
+  }
+
+  .section-mb {
+    @apply mb-14;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply mb-16;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply mb-20;
+    }
+  }
+
+  .section-pb {
+    @apply pb-14;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply pb-16;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply pb-20;
+    }
+  }
+
+  .section-m {
+    @apply my-14;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply my-16;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply my-20;
+    }
+  }
+
+  .section-p {
+    @apply py-14;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply py-16;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      @apply py-20;
+    }
+  }
+
+  .bg-blue-gradient {
+    @apply before:pointer-events-none before:absolute before:inset-0 before:-z-10;
+
+    &::before {
+      background: radial-gradient(
+        80.18% 116.42% at 50% 84.44%,
+        #fff 0%,
+        #fff 66.91%,
+        #bfe4ff 93.29%,
+        #68aff0 100%
+      );
+      height: 1300px;
+    }
+  }
+
+  .bg-blue-gradient-2 {
+    @apply before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:h-screen;
+
+    &::before {
+      background: linear-gradient(0deg, #fff 50%, #fff 86.72%, #bfe4ff 101.2%);
+    }
+  }
+}
