@@ -35,14 +35,11 @@ const config = {
     extend: {
       fontFamily: {
         sans: [
-          'var(--font-playfair)',
-          'Playfair Display',
-          'ui-serif',
-          'Georgia',
-          'Cambria',
-          'Times New Roman',
-          'Times',
-          'serif',
+          'var(--font-roboto)',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'sans-serif',
         ],
       },
       spacing: {
