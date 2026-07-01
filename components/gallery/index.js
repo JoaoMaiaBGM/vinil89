@@ -4,7 +4,7 @@ import { galleryImages } from './images';
 export default function Gallery() {
   return (
     <section
-      id="gallery"
+      id="media"
       className="relative w-full scroll-mt-28 bg-vin-background/95 px-3 py-8 sm:px-4 md:px-6 lg:px-8"
     >
       <Image
