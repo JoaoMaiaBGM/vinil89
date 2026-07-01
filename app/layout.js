@@ -1,10 +1,11 @@
-import { Playfair_Display } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import '@/styles/tailwind-base.css';
 import '@/styles/globals.scss';
 
-const playfair = Playfair_Display({
+const roboto = Roboto({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['400', '500', '700'],
+  variable: '--font-roboto',
   display: 'swap',
 });
 
@@ -34,8 +35,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
-      <body className={`${playfair.variable} font-sans antialiased`}>{children}</body>
+    <html lang="pt-BR" className={roboto.variable}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

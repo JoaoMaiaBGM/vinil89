@@ -1,6 +1,4 @@
-import Header from '@/components/header';
-import { About, Gallery, Hero } from '@/components/index';
-import Footer from '@/components/footer';
+import { About, Gallery, Hero, Header, Footer } from '@/components/index';
 
 export default function Home() {
   return (

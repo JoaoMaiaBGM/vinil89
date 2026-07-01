@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 const links = [
-  { href: '/', label: 'Home', isActive: true },
-  { href: '/#about', label: 'A Vinil89' },
-  { href: '/#gallery', label: 'Galeria de Fotos' },
-  { href: '/music-videos', label: 'Clipes' },
-  { href: '/contact', label: 'Contato' },
+  { href: '/', label: 'home' },
+  { href: '/#about', label: 'sobre' },
+  { href: '/#gallery', label: 'Mídia' },
+  { href: '/contact', label: 'contato' },
 ];
 
-export default function Navbar({ isMobile = false, onNavigate }) {
+export default function Navbar({ className }) {
   const pathname = usePathname();
 
   const handleAnchorNavigation = (event, href) => {
@@ -37,39 +37,14 @@ export default function Navbar({ isMobile = false, onNavigate }) {
     window.history.replaceState(null, '', href);
   };
 
-  if (isMobile) {
-    return (
-      <nav className="mx-auto flex w-[62%] max-w-[420px] flex-col pt-32">
-        {links.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={(event) => {
-              handleAnchorNavigation(event, item.href);
-              onNavigate?.();
-            }}
-            className={`block w-full border-b border-vin-black/55 py-3 text-center text-[20px] leading-none ${
-              item.isActive ? 'text-vin-black/35' : 'text-vin-black'
-            }`}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-    );
-  }
-
-  const desktopLinkClass =
-    'text-sm lg:text-[16px] font-medium text-vin-white transition-colors hover:text-vin-blue-100 whitespace-nowrap';
-
   return (
-    <nav className="flex items-center gap-4 lg:gap-6 xl:gap-8">
+    <nav className={`flex items-center gap-4 lg:gap-6 xl:gap-8 ${className || ''}`}>
       {links.map((item) => (
         <Link
           key={item.href}
           href={item.href}
           onClick={(event) => handleAnchorNavigation(event, item.href)}
-          className={`${desktopLinkClass} ${item.isActive ? 'text-vin-primary' : ''}`}
+          className="capitalize p-small text-vin-white transition-colors hover:text-vin-primary whitespace-nowrap"
         >
           {item.label}
         </Link>

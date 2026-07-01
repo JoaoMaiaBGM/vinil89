@@ -1,11 +1,38 @@
 @import 'tailwindcss';
 @config '../tailwind.config.js';
 
+@theme {
+  --color-primary: #f59e0b;
+  --color-secondary: #475569;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-accent: #06b6d4;
+  --color-accent-foreground: #1e1b4b;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-gradient-brand-start: #f59e0b;
+  --color-gradient-brand-mid: #f5e8c8;
+  --color-gradient-brand-mid-2: #b8ead8;
+  --color-gradient-brand-end: #06b6d4;
+}
+
 :root {
   --primary: #f59e0b;
   --secondary: #475569;
   --background: #ffffff;
   --foreground: #000000;
+
+  /* Accent Colors */
+  --accent: #06b6d4;
+  --accent-foreground: #1e1b4b;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Brand text gradient (orange → cream → mint → cyan) */
+  --gradient-brand-start: #f59e0b;
+  --gradient-brand-mid: #f5e8c8;
+  --gradient-brand-mid-2: #b8ead8;
+  --gradient-brand-end: #06b6d4;
 }
 
 @layer base {
@@ -14,8 +41,7 @@
   }
 
   body {
-    @apply bg-vin-white text-vin-black;
-    font-family: var(--font-playfair), 'Playfair Display', ui-serif, Georgia, serif;
+    @apply bg-vin-white text-vin-black font-sans;
   }
 
   button:not(:disabled),
@@ -58,6 +84,31 @@
       padding-right: 2rem;
       max-width: 1280px;
     }
+  }
+
+  .gradient-accent {
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-brand-start),
+      var(--gradient-brand-mid),
+      var(--gradient-brand-mid-2),
+      var(--gradient-brand-end)
+    );
+  }
+
+  .text-gradient {
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-brand-start) 0%,
+      var(--gradient-brand-mid) 32%,
+      var(--gradient-brand-mid-2) 62%,
+      var(--gradient-brand-end) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 
   .btn-primary {

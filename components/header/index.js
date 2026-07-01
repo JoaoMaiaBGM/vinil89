@@ -1,57 +1,50 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { LiaYoutube, LiaInstagram } from 'react-icons/lia';
 
-import DesktopHeader from './desktop-header';
-import MobileHeader from './mobile-header';
+import Navbar from './navbar';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <header
-      className={`sticky top-0 right-0 left-0 z-50 overflow-x-hidden transition-colors duration-300 ${
-        isScrolled
-          ? 'bg-vin-background shadow-[0_4px_18px_rgba(0,0,0,0.55)]'
-          : 'bg-transparent shadow-[0_2px_10px_rgba(0,0,0,0.35)]'
-      }`}
-    >
-      <div className="relative isolate">
-        {!isScrolled && (
-          <>
+    <header className="fixed top-0 w-full bg-vin-blue-350 backdrop-blur-md border-b border-border z-50">
+      <div className="relative z-10 mx-auto flex p-4 w-full max-w-[1200px] items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Link href="/" className="shrink-0">
             <Image
-              src="https://static.wixstatic.com/media/e203109d1da54dd0aaf8de0f98a49ad5.jpg"
-              alt="Textura do header"
-              fill
+              src="https://static.wixstatic.com/media/c3fe9c_b5825c1eeef245d2af977b118240321c~mv2.png"
+              alt="Logo Vinil89"
+              width={1200}
+              height={1200}
               priority
-              className="pointer-events-none -z-10 scale-150 object-cover object-top opacity-85 md:scale-100"
+              className="w-10 h-10 object-contain"
             />
-            <div className="pointer-events-none absolute inset-0 z-0 bg-vin-background/45" />
-          </>
-        )}
+          </Link>
 
-        <DesktopHeader />
-        <MobileHeader
-          isMenuOpen={isMenuOpen}
-          onOpenMenu={() => setIsMenuOpen(true)}
-          onCloseMenu={() => setIsMenuOpen(false)}
-          isScrolled={isScrolled}
-        />
+          <span className="text-2xl uppercase font-bold text-gradient">vinil89</span>
+        </div>
+
+        <Navbar className="hidden md:flex" />
+
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.instagram.com/bandavinil89/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-vin-white hover:text-vin-primary transition-colors"
+          >
+            <LiaInstagram className="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.youtube.com/@vinil89.oficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-vin-white hover:text-vin-primary transition-colors"
+          >
+            <LiaYoutube className="w-6 h-6" />
+          </a>
+        </div>
       </div>
     </header>
   );
