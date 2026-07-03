@@ -19,23 +19,23 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="section-pt relative flex flex-col overflow-hidden md:min-h-screen"
+      className="section-p relative flex flex-col bg-vin-blue-350 overflow-hidden md:min-h-screen"
     >
-      <div className="relative min-h-[300px] bg-vin-blue-350 md:flex-1 lg:absolute lg:inset-0">
+      <div className="relative min-h-[300px] md:flex-1 lg:absolute lg:inset-0">
         <Image
           src={HERO_IMAGE}
           alt="Vinil89 desktop hero background"
           fill
           priority
           sizes="100vw"
-          className="object-contain object-top md:object-cover"
+          className="object-cover object-top"
         />
 
         <div className="pointer-events-none absolute inset-0 block bg-linear-to-b from-vin-blue-350/60 via-vin-blue-350/40 to-vin-blue-350 lg:hidden" />
       </div>
 
-      <div className="relative z-10 flex shrink-0 flex-col items-center justify-center gap-6 bg-vin-blue-350 py-8 text-center lg:absolute lg:inset-0 lg:gap-8 lg:bg-transparent">
-        <h1 className="h1 w-full text-vin-white font-bold md:max-w-xl lg:max-w-3xl">
+      <div className="relative z-10 flex shrink-0 flex-col items-center justify-center gap-6 pt-14 text-center lg:pb-0 lg:absolute lg:inset-0 lg:gap-8 lg:bg-transparent">
+        <h1 className="h2 w-full text-vin-white font-bold md:max-w-sm lg:max-w-xl">
           <span className="text-gradient uppercase">a energia do</span>
           <br />
           <span className="text-vin-white uppercase">pop/rock nacional e internacional</span>
@@ -51,7 +51,7 @@ export default function Hero() {
         </button>
       </div>
 
-      <div className="absolute inset-0 hidden bg-linear-to-b from-vin-blue-350/60 via-vin-blue-350/40 to-vin-blue-350 lg:block" />
+      <div className="absolute inset-0 hidden bg-linear-to-b from-vin-blue-350/60 via-vin-blue-350/60 to-vin-blue-350 lg:block" />
     </section>
   );
 }
