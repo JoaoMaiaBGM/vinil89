@@ -1,6 +1,6 @@
-import Header from '@/components/header';
+import Header from '@/layout/header';
 import Image from 'next/image';
-import Footer from '@/components/footer';
+import Footer from '@/layout/footer';
 
 export const metadata = {
   title: 'Clipes',

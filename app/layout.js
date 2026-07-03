@@ -1,4 +1,4 @@
-import { Roboto } from 'next/font/google';
+import { Montserrat, Oswald, Roboto } from 'next/font/google';
 import '@/styles/tailwind-base.css';
 import '@/styles/globals.scss';
 
@@ -6,6 +6,20 @@ const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   variable: '--font-roboto',
+  display: 'swap',
+});
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-oswald',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-montserrat',
   display: 'swap',
 });
 
@@ -35,7 +49,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={roboto.variable}>
+    <html lang="pt-BR" className={`${roboto.variable} ${oswald.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

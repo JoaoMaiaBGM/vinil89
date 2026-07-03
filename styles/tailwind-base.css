@@ -112,20 +112,20 @@
   }
 
   .btn-primary {
-    @apply rounded-md border border-vin-white bg-vin-secondary px-4 py-2 uppercase text-vin-white transition-colors;
+    @apply rounded-md border border-vin-white bg-vin-secondary px-4 py-2 text-vin-white transition-colors;
     @apply hover:border-vin-black hover:bg-vin-black hover:text-vin-white;
   }
 
   .btn-accent {
-    @apply rounded-md border border-vin-primary bg-vin-primary px-4 py-2 uppercase text-vin-primaryForeground transition-colors;
+    @apply rounded-md border border-vin-primary bg-vin-primary px-4 py-2 text-vin-primaryForeground transition-colors;
     @apply hover:border-vin-primary/80 hover:bg-vin-primary/90;
   }
 
   .section-title {
-    @apply text-4xl font-normal md:text-5xl lg:text-6xl;
+    @apply font-display text-4xl font-bold uppercase md:text-5xl lg:text-6xl;
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl text-vin-secondary;
+    @apply font-display text-xl md:text-2xl;
   }
 }

@@ -1,8 +1,8 @@
-import Header from '@/components/header';
+import Header from '@/layout/header';
 import Image from 'next/image';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import { ContactForm } from './_components/form';
-import Footer from '@/components/footer';
+import Footer from '@/layout/footer';
 
 export const metadata = {
   title: 'Contato',

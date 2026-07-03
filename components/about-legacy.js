@@ -8,6 +8,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { SectionTitle } from '../layout/section-title';
 import Modal from './modal';
 
 export default function About() {
@@ -31,21 +33,10 @@ export default function About() {
   };
 
   return (
-    <section
-      id="about"
-      className="relative flex w-full scroll-mt-28 flex-col items-center justify-center bg-vin-background py-20 md:min-h-screen md:px-14 lg:h-screen"
-    >
-      <Image
-        src="https://static.wixstatic.com/media/c3fe9c_42fb8564160e42ce920c9e85a29efe2e~mv2.jpeg"
-        alt="Vinil89 about background"
-        fill
-        priority
-        className="object-cover object-center opacity-50"
-      />
+    <section id="sobre" className="section-p bg-vin-blue-300 min-h-screen">
+      <div className="container flex flex-col items-center justify-center">
+        <SectionTitle title="A Vinil89" />
 
-      <div className="absolute inset-0 h-full w-full bg-vin-secondary opacity-85" />
-
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 sm:px-8 lg:h-[420px] lg:flex-row lg:items-center lg:gap-10">
         <div className="relative aspect-4/3 w-full overflow-hidden self-center lg:h-full lg:w-3/5 lg:aspect-auto">
           <Swiper
             navigation={true}
@@ -68,7 +59,6 @@ export default function About() {
         </div>
 
         <div className="mt-2 flex w-full h-full flex-col items-center justify-between gap-5 self-center lg:mt-0 lg:w-2/5">
-          <h1 className="section-title">#A Vinil89</h1>
           <p className="p-large w-full text-left tracking-normal">
             Surgida em 2024, a Vinil89 é uma banda formada por músicos de diferentes estados do
             Brasil — Pernambuco, Pará, Brasília e Goiás. Carrega em sua essência a paixão pela
