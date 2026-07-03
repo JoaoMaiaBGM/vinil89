@@ -6,9 +6,6 @@ import { LiaPlaySolid } from 'react-icons/lia';
 const HERO_IMAGE =
   'https://static.wixstatic.com/media/c3fe9c_f792a61d86334dacba2db5fe23eaf5f2~mv2.png';
 
-const HERO_IMAGE_MOBILE =
-  'https://static.wixstatic.com/media/c3fe9c_30809ee2ff2948cea2485321128145e0~mv2.png';
-
 export default function Hero() {
   const handleScrollToMedia = () => {
     const media = document.getElementById('media');
@@ -35,10 +32,10 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 flex shrink-0 flex-col items-center justify-center gap-6 pt-14 text-center lg:pb-0 lg:absolute lg:inset-0 lg:gap-8 lg:bg-transparent">
-        <h1 className="h2 w-full text-vin-white font-bold md:max-w-sm lg:max-w-xl">
-          <span className="text-gradient uppercase">a energia do</span>
+        <h1 className="section-title w-full text-vin-white md:max-w-sm lg:max-w-xl">
+          <span className="text-gradient">a energia do</span>
           <br />
-          <span className="text-vin-white uppercase">pop/rock nacional e internacional</span>
+          <span className="text-vin-white">pop/rock nacional e internacional</span>
         </h1>
 
         <button

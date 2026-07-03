@@ -41,6 +41,7 @@ const config = {
           'Segoe UI',
           'sans-serif',
         ],
+        display: ['var(--font-oswald)', 'var(--font-montserrat)', 'sans-serif'],
       },
       spacing: {
         header: '57px',

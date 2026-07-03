@@ -10,14 +10,14 @@ export default function Modal({ isOpen, onClose, children }) {
       onClick={onClose}
     >
       <div
-        className="relative mt-8 w-full max-w-[440px] rounded-lg bg-vin-background md:mt-0"
+        className="relative mt-8 w-full max-w-[440px] rounded-lg bg-vin-blue-200 md:mt-0"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
-          <div className="z-10 flex justify-end bg-vin-background px-4 pb-2 pt-2 md:px-6">
+          <div className="z-10 flex justify-end bg-vin-blue-200 px-4 pb-2 pt-2 md:px-6">
             <button
               type="button"
-              className="cursor-pointer text-3xl leading-none text-vin-white"
+              className="cursor-pointer text-3xl leading-none text-vin-gray-100"
               onClick={onClose}
               aria-label="Fechar modal"
             >
