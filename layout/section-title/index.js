@@ -1,4 +1,4 @@
-export function SectionTitle({ className, title }) {
+export default function SectionTitle({ className, title }) {
   return (
     <div className={`flex flex-col items-center justify-center gap-4 ${className || ''}`}>
       {title && (

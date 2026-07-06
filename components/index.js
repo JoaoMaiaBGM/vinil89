@@ -1,7 +1,5 @@
-import About from './about/about';
-import Gallery from './gallery';
+import About from './about';
 import Hero from './hero';
-import Header from '../layout/header';
-import Footer from '../layout/footer';
+import Media from './media';
 
-export { About, Gallery, Hero, Header, Footer };
+export { About, Hero, Media };

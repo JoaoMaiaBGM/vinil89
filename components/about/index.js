@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import { SectionTitle } from '../../layout/section-title';
+import { SectionTitle } from '@/layout';
 import AboutModal from './_components/modal';
 
 const STATS_DATA = [
