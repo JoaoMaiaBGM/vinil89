@@ -12,7 +12,7 @@ export default function Gallery({ images, currentImageIndex, setCurrentImageInde
 
   return (
     <>
-      <div className="relative rounded-lg overflow-hidden group">
+      <div className="relative rounded-lg max-w-[466px] overflow-hidden group">
         <Image
           src={images[currentImageIndex].src}
           alt={images[currentImageIndex].alt}

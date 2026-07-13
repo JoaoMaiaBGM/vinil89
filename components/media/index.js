@@ -3,14 +3,21 @@
 import { useState } from 'react';
 
 import { SectionTitle } from '@/layout';
-import Gallery from './_components/gallery';
-import { galleryImages } from './_assets/image-list';
+import { Gallery, Videos } from './_components';
+import { galleryImages, videosList } from './_assets';
 
 export default function Media() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const images = galleryImages.map((image) => ({
     src: image.src,
     alt: image.alt,
+  }));
+
+  const videos = videosList.map((video) => ({
+    id: video.id,
+    title: video.title,
+    artist: video.artist,
   }));
 
   return (
@@ -26,6 +33,11 @@ export default function Media() {
               currentImageIndex={currentImageIndex}
               setCurrentImageIndex={setCurrentImageIndex}
             />
+          </div>
+
+          <div>
+            <h3 className="h3 font-bold section-subtitle text-accent uppercase mb-6">clipes</h3>
+            <Videos videos={videos} />
           </div>
         </div>
       </div>
