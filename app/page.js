@@ -1,4 +1,5 @@
-import { About, Gallery, Hero, Header, Footer } from '@/components/index';
+import { About, Hero, Media } from '@/components/index';
+import { Header, Footer } from '@/layout';
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <Gallery />
+      <Media />
       <Footer />
     </>
   );
