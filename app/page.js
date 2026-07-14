@@ -1,4 +1,4 @@
-import { About, Hero, Media } from '@/components/index';
+import { About, Contact, Hero, Media } from '@/components/index';
 import { Header, Footer } from '@/layout';
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
       <Hero />
       <About />
       <Media />
+      <Contact />
       <Footer />
     </>
   );
