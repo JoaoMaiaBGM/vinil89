@@ -1,5 +1,6 @@
 import About from './about';
-import Gallery from './gallery';
+import Contact from './contact';
 import Hero from './hero';
+import Media from './media';
 
-export { About, Gallery, Hero };
+export { About, Contact, Hero, Media };

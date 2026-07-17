@@ -1,6 +1,5 @@
-import Header from '@/components/header';
-import { About, Gallery, Hero } from '@/components/index';
-import Footer from '@/components/footer';
+import { About, Contact, Hero, Media } from '@/components/index';
+import { Header, Footer } from '@/layout';
 
 export default function Home() {
   return (
@@ -8,7 +7,8 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <Gallery />
+      <Media />
+      <Contact />
       <Footer />
     </>
   );

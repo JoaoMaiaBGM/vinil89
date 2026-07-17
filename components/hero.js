@@ -1,42 +1,54 @@
+'use client';
+
 import Image from 'next/image';
+import { LiaPlaySolid } from 'react-icons/lia';
+
+const HERO_IMAGE =
+  'https://static.wixstatic.com/media/c3fe9c_f792a61d86334dacba2db5fe23eaf5f2~mv2.png';
 
 export default function Hero() {
+  const handleScrollToMedia = () => {
+    const media = document.getElementById('media');
+    if (!media) return;
+    media.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative h-[60svh] w-full bg-black md:h-[80svh] lg:h-[150svh] flex flex-col items-center justify-center">
-      <Image
-        src="https://static.wixstatic.com/media/c3fe9c_64a2f466993247fb86b18a52d833441b~mv2.jpg"
-        alt="Vinil89 desktop hero background"
-        fill
-        priority
-        className="object-cover object-top opacity-70 hidden md:block"
-      />
-
-      <Image
-        src="https://static.wixstatic.com/media/c3fe9c_b884a49de973496fb4796d067aacb732~mv2.jpg"
-        alt="Vinil89 mobile hero background"
-        fill
-        priority
-        className="object-cover object-top opacity-70 block md:hidden"
-      />
-
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+    <section
+      id="home"
+      className="section-p relative flex flex-col bg-vin-blue-350 overflow-hidden md:min-h-screen"
+    >
+      <div className="relative min-h-[300px] md:flex-1 lg:absolute lg:inset-0">
         <Image
-          src="https://static.wixstatic.com/media/c3fe9c_ca47b72a366a4f8db9d4ee553b6549ce~mv2.png"
-          alt="Vinil89 logo text"
-          width={400}
-          height={400}
-          className="flash-logo w-60 object-contain md:w-96"
+          src={HERO_IMAGE}
+          alt="Vinil89 desktop hero background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top"
         />
 
-        <a href="/music-videos">
-          <button
-            type="button"
-            className="bg-[#999999] text-white border uppercase border-white px-4 py-2 rounded-md cursor-pointer mt-5 hover:bg-black hover:border-black hover:text-white"
-          >
-            Ouça agora
-          </button>
-        </a>
+        <div className="pointer-events-none absolute inset-0 block bg-linear-to-b from-vin-blue-350/60 via-vin-blue-350/40 to-vin-blue-350 lg:hidden" />
       </div>
+
+      <div className="relative z-10 flex shrink-0 flex-col items-center justify-center gap-6 pt-14 text-center lg:pb-0 lg:absolute lg:inset-0 lg:gap-8 lg:bg-transparent">
+        <h1 className="section-title w-full text-vin-white md:max-w-sm lg:max-w-xl">
+          <span className="text-gradient">a energia do</span>
+          <br />
+          <span className="text-vin-white">pop/rock nacional e internacional</span>
+        </h1>
+
+        <button
+          type="button"
+          className="btn-accent p-medium-bold h-12 px-4 flex items-center justify-center gap-2"
+          onClick={handleScrollToMedia}
+        >
+          <LiaPlaySolid className="w-5 h-5" />
+          Ouça agora
+        </button>
+      </div>
+
+      <div className="absolute inset-0 hidden bg-linear-to-b from-vin-blue-350/60 via-vin-blue-350/60 to-vin-blue-350 lg:block" />
     </section>
   );
 }

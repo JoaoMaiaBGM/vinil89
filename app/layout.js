@@ -1,10 +1,26 @@
-import { IBM_Plex_Mono } from 'next/font/google';
-import './globals.css';
+import { Montserrat, Oswald, Roboto } from 'next/font/google';
+import '@/styles/tailwind-base.css';
+import '@/styles/globals.scss';
 
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ['400', '500', '700'],
-  variable: '--font-ibm-plex-mono',
+const roboto = Roboto({
   subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-roboto',
+  display: 'swap',
+});
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-oswald',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -33,8 +49,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexMono.variable} antialiased`}>{children}</body>
+    <html lang="pt-BR" className={`${roboto.variable} ${oswald.variable} ${montserrat.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

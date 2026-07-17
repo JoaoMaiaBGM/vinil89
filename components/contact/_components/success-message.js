@@ -3,13 +3,13 @@ import { GiCheckMark } from 'react-icons/gi';
 export const SuccessMessage = () => {
   return (
     <div className="mx-auto text-center">
-      <GiCheckMark className="mx-auto mb-10 size-24 rounded-full bg-brst-blue-200 p-4 text-white" />
+      <GiCheckMark className="mx-auto mb-10 size-24 rounded-full bg-vin-success p-4 text-vin-white" />
 
-      <h2 className="p-large-bold whitespace-pre-line text-center">
+      <h2 className="p-large-bold whitespace-pre-line text-center text-vin-white mb-1">
         Obrigado pelo interesse em nos contatar!
       </h2>
 
-      <p className="p-medium whitespace-pre-line text-center text-brst-gray-800">
+      <p className="p-medium whitespace-pre-line text-center text-vin-white">
         Em breve entraremos em contato com você.
       </p>
     </div>
