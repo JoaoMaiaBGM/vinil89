@@ -10,20 +10,18 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-vin-blue-350 backdrop-blur-md border-b border-border z-50">
       <div className="relative z-10 mx-auto flex p-4 w-full max-w-[1200px] items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="shrink-0">
-            <Image
-              src="https://static.wixstatic.com/media/c3fe9c_b5825c1eeef245d2af977b118240321c~mv2.png"
-              alt="Logo Vinil89"
-              width={1200}
-              height={1200}
-              priority
-              className="w-10 h-10 object-contain"
-            />
-          </Link>
+        <Link href="/" className="shrink-0 flex items-center gap-2">
+          <Image
+            src="https://static.wixstatic.com/media/c3fe9c_b5825c1eeef245d2af977b118240321c~mv2.png"
+            alt="Logo Vinil89"
+            width={1200}
+            height={1200}
+            priority
+            className="w-10 h-10 object-contain"
+          />
 
           <span className="text-2xl uppercase font-bold text-gradient">vinil89</span>
-        </div>
+        </Link>
 
         <Navbar className="hidden md:flex" />
 

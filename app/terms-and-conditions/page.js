@@ -1,4 +1,5 @@
 import { Header, Footer, InConstruction } from '@/layout';
+import TermsAndConditionsContent from './_components/content';
 
 export const metadata = {
   title: 'Termos e Condições',
@@ -7,10 +8,10 @@ export const metadata = {
 
 export default function TermsAndConditions() {
   return (
-    <main id="termos-e-condicoes" className="bg-vin-background min-h-screen">
+    <main id="termos-e-condicoes" className="min-h-screen">
       <>
         <Header />
-        <InConstruction />
+        {TermsAndConditionsContent ? <TermsAndConditionsContent /> : <InConstruction />}
         <Footer />
       </>
     </main>

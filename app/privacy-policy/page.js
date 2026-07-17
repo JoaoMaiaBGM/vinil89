@@ -1,4 +1,5 @@
 import { Header, Footer, InConstruction } from '@/layout';
+import PrivacyPolicyContent from './_components/content';
 
 export const metadata = {
   title: 'Política de Privacidade',
@@ -10,7 +11,7 @@ export default function PrivacyPolicy() {
     <main id="politica-de-privacidade" className="bg-vin-background min-h-screen">
       <>
         <Header />
-        <InConstruction />
+        {PrivacyPolicyContent ? <PrivacyPolicyContent /> : <InConstruction />}
         <Footer />
       </>
     </main>
