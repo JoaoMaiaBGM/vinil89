@@ -87,6 +87,19 @@ export default function TermsAndConditionsContent() {
                 deste documento, fica eleito o foro da comarca de Recife/PE.
               </p>
             </li>
+
+            <li>
+              <h3 className="h3 text-vin-white mb-3">Dúvidas ou Contratações:</h3>
+              <p className="p-medium text-vin-gray-200">
+                Para falar com a produção da banda sobre shows ou dúvidas sobre o site, entre em
+                contato diretamente pelo e-mail:
+                <span className="font-bold">
+                  {' '}
+                  <a href="mailto:vinil89.oficial@gmail.com.br">vinil89.oficial@gmail.com.br</a>
+                </span>
+                .
+              </p>
+            </li>
           </ul>
         </div>
       </div>
