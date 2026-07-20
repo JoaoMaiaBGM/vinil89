@@ -2,6 +2,13 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import {
+  PiUsersThreeLight,
+  PiMusicNotesLight,
+  PiCalendarBlankLight,
+  PiUserCheckLight,
+  PiHeartStraightLight,
+} from 'react-icons/pi';
 
 import { SectionTitle } from '@/layout';
 import AboutModal from './_components/modal';
@@ -11,21 +18,25 @@ const STATS_DATA = [
     title: 'Integrantes',
     value: 5,
     bg: 'primary',
+    icon: <PiUsersThreeLight className="text-vin-primary" size={28} />,
   },
   {
     title: 'Fundação',
     value: 2024,
     bg: 'blue',
+    icon: <PiCalendarBlankLight className="text-vin-blue-100" size={28} />,
   },
   {
-    title: 'Shows',
-    value: 50,
+    title: 'Músicas no repertório',
+    value: '60+',
     bg: 'primary',
+    icon: <PiMusicNotesLight className="text-vin-primary" size={28} />,
   },
   {
-    title: 'Alcance',
-    value: 'BR',
+    title: 'Seguidores e crescendo',
+    value: '700+',
     bg: 'blue',
+    icon: <PiHeartStraightLight className="text-vin-blue-100" size={28} />,
   },
 ];
 
@@ -80,14 +91,14 @@ export default function About() {
           {STATS_DATA.map((stat) => (
             <div
               key={stat.title}
-              className="bg-vin-blue-350 rounded-lg p-6 text-center transition-colors"
+              className="bg-vin-blue-350 h-[150px] flex flex-col items-center justify-center rounded-lg p-6 text-center transition-colors space-y-2 lg:h-[200px]"
             >
-              <div
-                className={`text-4xl font-bold ${stat.bg === 'primary' ? 'text-vin-primary' : 'text-vin-blue-100'} mb-2`}
+              <h2
+                className={`h1 font-bold ${stat.bg === 'primary' ? 'text-vin-primary' : 'text-vin-blue-100'}`}
               >
                 {stat.value}
-              </div>
-              <p className="text-vin-white">{stat.title}</p>
+              </h2>
+              <p className="p-small text-vin-white">{stat.title}</p>
             </div>
           ))}
         </div>
