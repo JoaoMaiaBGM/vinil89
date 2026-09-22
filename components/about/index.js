@@ -34,7 +34,7 @@ const STATS_DATA = [
   },
   {
     title: 'Seguidores e crescendo',
-    value: '700+',
+    value: '800+',
     bg: 'blue',
     icon: <PiHeartStraightLight className="text-vin-blue-100" size={28} />,
   },
